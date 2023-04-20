@@ -19,8 +19,8 @@ public class PairStreamMixer {
     }
 
 
-    // метод змішування будь-яких потоків через створення проміжного об'єкту Pair
-    // ПРАЦЮЄ з безскінченними стримами так виконує умови завдання
+    // метод змішування будь-яких потоків одного типу через створення проміжного об'єкту Pair
+    // ПРАЦЮЄ з безскінченними стримами
     static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
         Iterator<T> iterator1 = first.iterator();
         Iterator<T> iterator2 = second.iterator();

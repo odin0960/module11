@@ -11,7 +11,7 @@ public class LitteredStream {
         String[] numbers = {"\"1", "2", "\"8", "0\"", "\"4", "5\""};
         Object[] numbersObj = {"\"1", "2", "\"8", "0\"", "\"4", "5\""};
 
-        // Швидкий вивід "чистих" чисел як стрінгів
+        // Швидкий вивід рядка "чистих" чисел як стрінгів
         System.out.println(Arrays.stream(numbers)
                 .map(n -> n.replace("\"", ""))
                 .sorted()
