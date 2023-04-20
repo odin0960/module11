@@ -24,7 +24,7 @@ public class PairStreamMixer {
     static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
         Iterator<T> iterator1 = first.iterator();
         Iterator<T> iterator2 = second.iterator();
-        Iterable<Pair<T,T>> i=()->new Iterator<Pair<T,T>>() {
+        Iterable<Pair<T,T>> iterator=()->new Iterator<Pair<T,T>>() {
             public boolean hasNext() {
                 return iterator1.hasNext() && iterator2.hasNext();
             }
@@ -32,7 +32,7 @@ public class PairStreamMixer {
                 return new Pair<T,T>(iterator1.next(), iterator2.next());
             }
         };
-        return StreamSupport.stream(i.spliterator(), false)
+        return StreamSupport.stream(iterator.spliterator(), false)
                 .flatMap(n -> Stream.of(n.getA(),n.getB()));
     }
 }
