@@ -26,7 +26,7 @@ public class LitteredStream {
         System.out.println(Arrays.stream(numbers)
                 .map(n -> n.replace("\"", ""))
                 .sorted()
-                .collect(Collectors.joining(", ")));
+                .collect(Collectors.joining(", ", "\"", "\"")));
 
 
         //Варіант 2
@@ -39,7 +39,7 @@ public class LitteredStream {
 
         System.out.println(numberList.stream()
                 .map(String::valueOf)
-                .collect(Collectors.joining(", ")));
+                .collect(Collectors.joining(", ", "\"", "\"")));
 
 
         //Варіант 3
@@ -51,7 +51,7 @@ public class LitteredStream {
 
         System.out.println(numberListOther.stream()
                 .map(String::valueOf)
-                .collect(Collectors.joining(", ")));
+                .collect(Collectors.joining(", ", "\"", "\"")));
 
     }
 }
