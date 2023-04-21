@@ -14,14 +14,9 @@ public class LitteredStream {
         System.out.println(Arrays.toString(numbersOther));
 
         //Варіант 3
-        List<Integer> numberListOther = Arrays.stream(numbersOther)
+        System.out.println(Arrays.stream(numbersOther)
                 .flatMap(n -> Arrays.stream(n.split("\\s*,\\s*")))
-                .map(Integer::parseInt)
                 .sorted()
-                .toList();
-
-        System.out.println(numberListOther.stream()
-                .map(String::valueOf)
                 .collect(Collectors.joining(", ", "\"", "\"")));
 
 
