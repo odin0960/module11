@@ -9,6 +9,7 @@ public class LitteredStream {
     public static void main(String[] args) {
 
         String[] numbers = {"\"1", "2", "\"8", "0\"", "\"4", "5\""};
+        System.out.println(Arrays.toString(numbers));
         Object[] numbersObj = {"\"1", "2", "\"8", "0\"", "\"4", "5\""};
 
         // Швидкий вивід рядка "чистих" чисел як стрінгів
