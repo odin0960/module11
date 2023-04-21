@@ -10,7 +10,7 @@ public class NameList {
 
         List<String> names = Arrays.asList("Ivan", "Petro", "John", "Bill", "Ivan", "Alice", "Mykola", "Sam");
 
-        int[] i = {1};
+        int[] i = {0};
 
         String filteredNames = names.stream()
                 .map(name -> i[0]++ + ". " + name)
